@@ -40,10 +40,9 @@ const App = () => {
         title="Scoreboard"
         totalPlayers={1}
       />
-      <Player
-        name="Tara"
-        score={20}
-      />
+      <Player name="Tara" score={20} />
+      <Player name="Kira" score={25} />
+      <Player name="Tia" score={23} />
     </div>
   );
 }
