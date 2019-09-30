@@ -12,13 +12,13 @@ const Header = (props) => {
   );
 }
 
-const Player = () => {
+const Player = (props) => {
   return (
     <div className="player">
       <span className="player-name">
-        Tara
+        {props.name}
       </span>
-      <Counter />
+      <Counter score={props.score}/>
     </div>
   );
 }
@@ -40,7 +40,10 @@ const App = () => {
         title="Scoreboard"
         totalPlayers={1}
       />
-      <Player />
+      <Player
+        name="Tara"
+        score={20}
+      />
     </div>
   );
 }
