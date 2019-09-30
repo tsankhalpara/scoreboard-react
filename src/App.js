@@ -22,4 +22,13 @@ const Player = () => {
   );
 }
 
+const App = () => {
+  return (
+    <div className="scoreboard">
+      <Header />
+      <Player />
+    </div>
+  );
+}
+
 export default Header;
