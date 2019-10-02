@@ -70,7 +70,7 @@ class App extends React.Component {
       <div className="scoreboard">
         <Header
           title="Scoreboard"
-          totalPlayers={1}
+          totalPlayers={this.state.players.length}
         />
         {this.state.players.map( player =>
           <Player
