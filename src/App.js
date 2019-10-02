@@ -54,13 +54,16 @@ class App extends React.Component {
   state = {
     players: [
       {
-        name:"Tara"
+        name:"Tara",
+        id: 1
       },
       {
-        name:"Kira"
+        name:"Kira",
+        id: 2
       },
       {
-        name:"Tia"
+        name:"Tia",
+        id: 3
       }
     ]
   };
@@ -75,6 +78,7 @@ class App extends React.Component {
         {this.state.players.map( player =>
           <Player
             name={player.name}
+            key={player.id.toString()}
           />
         )}
       </div>
