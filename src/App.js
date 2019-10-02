@@ -2,6 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const players = [
+  {
+    name:"Tara",
+    score:20
+  },
+  {
+    name:"Kira",
+    score:25
+  },
+  {
+    name:"Tia",
+    score:23
+  }
+];
 
 const Header = (props) => {
   return (
