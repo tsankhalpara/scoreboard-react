@@ -65,18 +65,20 @@ class Counter extends React.Component {
   }
 }
 
-const App = () => {
-  return (
-    <div className="scoreboard">
-      <Header
-        title="Scoreboard"
-        totalPlayers={1}
-      />
-      <Player name="Tara" score={20} />
-      <Player name="Kira" score={25} />
-      <Player name="Tia" score={23} />
-    </div>
-  );
+class App extends React.Component {
+  render ()
+    return (
+      <div className="scoreboard">
+        <Header
+          title="Scoreboard"
+          totalPlayers={1}
+        />
+        <Player name="Tara" score={20} />
+        <Player name="Kira" score={25} />
+        <Player name="Tia" score={23} />
+      </div>
+    );
+  }
 }
 
 export default App;
