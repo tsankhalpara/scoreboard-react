@@ -1,21 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-const players = [
-  {
-    name:"Tara",
-    score:20
-  },
-  {
-    name:"Kira",
-    score:25
-  },
-  {
-    name:"Tia",
-    score:23
-  }
-];
 
 const Header = (props) => {
   return (
@@ -66,16 +50,33 @@ class Counter extends React.Component {
 }
 
 class App extends React.Component {
-  render ()
+
+  state = {
+    players: [
+      {
+        name:"Tara"
+      },
+      {
+        name:"Kira"
+      },
+      {
+        name:"Tia"
+      }
+    ]
+  };
+
+  render () {
     return (
       <div className="scoreboard">
         <Header
           title="Scoreboard"
           totalPlayers={1}
         />
-        <Player name="Tara" score={20} />
-        <Player name="Kira" score={25} />
-        <Player name="Tia" score={23} />
+        {this.state.players.map( player =>
+          <Player
+            name={player.name}
+          />
+        )}
       </div>
     );
   }
